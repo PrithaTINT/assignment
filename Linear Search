@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int l, i, n, j, f=0;
+    printf("What do you want the size of the array to be?  ");
+    scanf("%d", &l);
+    int a[l];
+    printf("Enter elements in the array: ");
+    for(i= 0; i<l; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter the element to be searched: ");
+    scanf("%d", &n);
+    for(j=0; j<l; j++)
+    {
+        if(a[j] == n)
+        {
+            f=1;
+            break;
+        }
+    }
+    if (f == 1)
+    {
+        printf("%d is found at %d th index of the array", n, j);
+    }
+    else{
+        printf("The array does not contain the entered number.");
+    }
+    return 0;
+}
